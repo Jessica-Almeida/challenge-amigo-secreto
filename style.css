@@ -121,6 +121,12 @@ button {
     border-radius: 0 25px 25px 0;
 }
 
+#mensagem {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FF0000;
+}
+
 .button-add:hover {
     background-color: #a1a1a1;
 }
