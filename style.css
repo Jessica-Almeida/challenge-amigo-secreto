@@ -157,10 +157,19 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    margin: 5px;
 }
 
 .button-draw img {
     margin-right: 40px;
+}
+
+#btnReiniciar {
+    display: none;
+}
+
+.img-reiniciar {
+    height: 35px;
 }
 
 .button-draw:hover {

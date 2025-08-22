@@ -3,6 +3,10 @@ let amigos = [];
 const mensagem = document.getElementById("mensagem");
 const inputNome = document.getElementById("amigo");
 const listaAmigos = document.getElementById("listaAmigos");
+const resultado = document.getElementById("resultado");
+const botaoSortear = document.getElementById("btnSortear");
+const botaoReiniciar = document.getElementById("btnReiniciar");
+
 
 function mostrarMensagem(texto = "", cor = "") {
     mensagem.textContent = texto;
@@ -48,3 +52,27 @@ function adicionarAmigo() {
     inputNome.value = "";
     inputNome.focus();
 }
+
+ function sortearAmigo() {
+      if (amigos.length < 3) {
+        mostrarMensagem("Adicione pelo menos 3 amigos para realizar o sorteio.", "#FF0000"); 
+        return;
+      }
+
+      const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+      const amigoSorteado = amigos[indiceAleatorio];
+
+      resultado.innerHTML = `O amigo secreto sorteado foi: <strong>${amigoSorteado}</strong>`;
+      botaoSortear.disabled = true;
+        botaoReiniciar.style.display = "inline-block";
+      mostrarMensagem();
+    }
+
+    function reiniciarJogo() {
+      amigos = [];
+      listaAmigos.innerHTML = "";
+      resultado.innerHTML = "";
+      botaoSortear.disabled = false;
+      botaoReiniciar.style.display = "none";
+      mostrarMensagem("Jogo reiniciado! Adicione novos amigos.", "#008000");
+    }
