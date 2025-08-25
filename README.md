@@ -15,6 +15,7 @@ Um jogo simples em **JavaScript** para sortear amigos de forma divertida e inter
   - O botão **Sortear** é desativado após o sorteio.  
   - O botão **Reiniciar** só aparece após o primeiro sorteio.  
 
+## 📷 Demonstração
 
-
+👉 [Veja o projeto rodando no GitHub Pages](https://jessica-almeida.github.io/challenge-amigo-secreto/)
 
